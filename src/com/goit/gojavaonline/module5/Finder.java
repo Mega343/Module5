@@ -5,21 +5,17 @@ public class Finder {
 
   public static int findMax(int[] name){
       int max = name[0];
-        for(int i = 1; i < name.length; i++){
-            if(name[i] > max){
-                max = name[i+1];
+        for(int i = 0; i < name.length; i++){
+           max = Math.max(max,name [i]);
             }
-        }
         return max;
     }
 
     public static int findMin(int[] name){
        int min = name[0];
-        for(int i = 1; i < name.length; i++){
-            if(name[i] < min){
-                min = name[i];
+        for(int i = 0; i < name.length; i++){
+            min = Math.min(min,name[i]);
             }
-        }
         return min;
     }
 }

@@ -7,7 +7,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[] mas = {2, 15, 33, 21, 10, -5, 0, 29, -32};
+        int[] mas = {2, 15, 21, 10, -5, 0, 29, 34, -32, 0};
 
         Finder finder = new Finder();
         int resultMax = finder.findMax(mas);
