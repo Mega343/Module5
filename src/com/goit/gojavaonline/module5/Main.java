@@ -7,21 +7,27 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[] mas = {2, 15, 21, 10, -5, 0, 29, 34, -32, 0};
+        int[] mas = new int[0];
+        try {
+            Finder finder = new Finder();
+            int resultMax = finder.findMax(mas);
+            int resultMin = finder.findMin(mas);
+            MassivSort sort = new MassivSort();
+            sort.massivSort(mas);
 
-        Finder finder = new Finder();
-        int resultMax = finder.findMax(mas);
-        int resultMin = finder.findMin(mas);
-        MassivSort sort = new MassivSort();
-        sort.massivSort(mas);
-
-        System.out.println(resultMax);
-        System.out.println(resultMin);
-        System.out.println("");
+            System.out.println(resultMax);
+            System.out.println(resultMin);
+            System.out.println("");
 
         for (int i = 0; i < mas.length; i++) {
             System.out.println(mas[i]);
+        }
+        } catch(ArrayIndexOutOfBoundsException e){
+
+            System.out.println("Massiv is empty.");
+
+            }
 
         }
     }
-}
+
