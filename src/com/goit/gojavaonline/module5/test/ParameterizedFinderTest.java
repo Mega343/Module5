@@ -50,4 +50,16 @@ public class ParameterizedFinderTest {
         Assert.assertEquals(minExpected, finder.findMin(mas));
 
     }
+
+    @Test (expected =  ArrayIndexOutOfBoundsException.class)
+    public void testFindMinException(){
+        int[] mas = new int[0];
+        finder.findMin(mas);
+    }
+
+    @Test (expected =  ArrayIndexOutOfBoundsException.class)
+    public void testFindMaxException(){
+        int[] mas = new int[0];
+        finder.findMax(mas);
+    }
 }
